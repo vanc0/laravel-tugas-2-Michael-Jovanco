@@ -29,7 +29,8 @@
               </div>
             </div>
             <div class="card-body">
-                <table class="table table-bordered table-striped">
+                <a href="{{route ('fakultas.create')}}" class = "btn btn-primary"> Tambah</a>
+                <table class="table">
                     <tr>
                         <th>Nama</th>
                         <th>Singkatan</th>
