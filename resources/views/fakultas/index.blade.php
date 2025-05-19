@@ -7,7 +7,7 @@
           <!-- Default box -->
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title">List Falkutas</h3>
+              <h3 class="card-title">List Fakultas</h3>
               <div class="card-tools">
                 <button
                   type="button"

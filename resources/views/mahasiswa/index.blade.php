@@ -29,7 +29,8 @@
               </div>
             </div>
             <div class="card-body">
-                <table class="table table-bordered table-striped">
+                <a href="{{route ('mahasiswa.create')}}" class = "btn btn-primary"> Tambah</a>
+                <table class="table">
                     <tr>
                         <th>Nama</th>
                         <th>NPM</th>
@@ -38,6 +39,7 @@
                         <th>Tempat</th>
                         <th>Asal SMA</th>
                         <th>Prodi</th>
+                        <th>Foto</th>
                     </tr>
                     @foreach ($mahasiswa as $item)
                     <tr>
@@ -48,13 +50,18 @@
                         <td>{{ $item->tempat_lahir}}</td>
                         <td>{{ $item->asal_sma}}</td>
                         <td>{{ $item->prodi->nama}}</td>
+                        <td>{{ $item->foto}}</td>
                     </tr>
                     @endforeach
                 </table>
+
             </div>
             <!-- /.card-body -->
+
+
+
           <!-- /.card -->
         </div>
       </div>
       <!--end::Row-->
-@endsection
+      @endsection

@@ -37,8 +37,7 @@ class FakultasController extends Controller
             'singkatan'=> 'required|max:5',
             'dekan' => 'required',
             'wakil_dekan' => 'required',
-        ]
-        );
+        ]);
         //simpan data ke tabel fakultas
         Fakultas::create($input);
         //redirect ke halaman fakultas
