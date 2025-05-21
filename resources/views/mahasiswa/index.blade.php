@@ -32,17 +32,19 @@
                 <a href="{{route ('mahasiswa.create')}}" class = "btn btn-primary"> Tambah</a>
                 <table class="table">
                     <tr>
+                        <th>Foto</th>
                         <th>Nama</th>
                         <th>NPM</th>
                         <th>Jenis Kelamin</th>
-                        <th>Tanggal</th>
-                        <th>Tempat</th>
+                        <th>Tanggal Lahir</th>
+                        <th>Tempat Lahir</th>
                         <th>Asal SMA</th>
                         <th>Prodi</th>
-                        <th>Foto</th>
+                        <th>Aksi</th>
                     </tr>
                     @foreach ($mahasiswa as $item)
                     <tr>
+                        <td><img src="images/{{ $item->foto }}" width="10px"></td>
                         <td>{{ $item->nama }}</td>
                         <td>{{ $item->npm}}</td>
                         <td>{{ $item->jenis_kelamin}}</td>
@@ -50,7 +52,14 @@
                         <td>{{ $item->tempat_lahir}}</td>
                         <td>{{ $item->asal_sma}}</td>
                         <td>{{ $item->prodi->nama}}</td>
-                        <td>{{ $item->foto}}</td>
+                        <td>
+                        <a href="{{route('mahasiswa.show', $item->id)}}" class="btn btn-info">Show</a>
+                        <a href="{{route('mahasiswa.edit', $item->id)}}" class="btn btn-warning">Edit</a>
+                        <form action="{{ route('mahasiswa.destroy', $item->id) }}" method="POST" class="d-inline">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                    </td>
                     </tr>
                     @endforeach
                 </table>

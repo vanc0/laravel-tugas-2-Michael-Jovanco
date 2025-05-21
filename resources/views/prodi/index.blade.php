@@ -39,6 +39,7 @@
                             <th>Kaprodi</th>
                             <th>Sekretaris</th>
                             <th>Fakultas</th>
+                            <th>Aksi</th>
                         </tr>
                     </tr>
                 @foreach ($prodi as $item)
