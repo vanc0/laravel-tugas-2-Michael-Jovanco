@@ -51,7 +51,9 @@ class ProdiController extends Controller
      */
     public function show(Prodi $prodi)
     {
-        //
+        $prodi = Prodi::findOrFail($prodi->id);
+        // dd ($prodi);
+        return view('prodi.show', compact('prodi'));
     }
 
     /**
@@ -73,8 +75,10 @@ class ProdiController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Prodi $prodi)
+    public function destroy($prodi)
     {
-        //
+        $prodi = Prodi::findOrFail($prodi);
+        $prodi->delete();
+        return redirect()->route('prodi.index')->with('success', 'Program Studi berhasil dihapus.');
     }
 }

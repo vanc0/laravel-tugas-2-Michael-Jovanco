@@ -36,6 +36,7 @@
                         <th>Singkatan</th>
                         <th>Dekan</th>
                         <th>Wakil Dekan</th>
+                        <th>Aksi</th>
                     </tr>
                 @foreach ($fakultas as $item)
                     <tr>
