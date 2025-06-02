@@ -21,6 +21,6 @@ class Prodi extends Model
     }
     public function mata_kuliah()
     {
-        return $this->hasMany(Mata_Kuliah::class, 'prodi_id', 'id');
+        return $this->hasMany(MataKuliah::class, 'prodi_id', 'id');
     }
 }
