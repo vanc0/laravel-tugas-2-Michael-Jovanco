@@ -44,6 +44,35 @@
     <!--begin::Required Plugin(AdminLTE)-->
     <link rel="stylesheet" href=" {{ asset('css/adminlte.css')}}" />
     <!--end::Required Plugin(AdminLTE)-->
+    <style>
+      body {
+        background: linear-gradient(135deg, #f8f8f8 0%, #f2e9e4 100%);
+        font-family: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
+      }
+      .app-sidebar,
+      .sidebar-wrapper {
+        background: linear-gradient(135deg, #ff7a3d 0%, #f53003 100%) !important;
+        transition: background 0.2s;
+      }
+      /* Hanya nav-link yang bisa hover, sidebar tidak */
+      .sidebar-menu .nav-link.active, .sidebar-menu .nav-link:hover {
+        background: #fff !important;
+        color: #f53003 !important;
+      }
+      .sidebar-menu .nav-link {
+        border-radius: 6px;
+        margin: 2px 4px;
+        transition: background 0.2s, color 0.2s;
+      }
+      .sidebar-menu .nav-link p, .sidebar-menu .nav-link i {
+        color: inherit !important;
+      }
+      /* Hilangkan efek hover pada .app-sidebar dan .sidebar-wrapper */
+      .app-sidebar:hover,
+      .sidebar-wrapper:hover {
+        background: linear-gradient(135deg, #ff7a3d 0%, #f53003 100%) !important;
+      }
+    </style>
   </head>
   <!--end::Head-->
   <!--begin::Body-->
@@ -218,7 +247,7 @@
                     alt="User Image"
                   />
                   <p>
-                    {{ Auth::user()->name }} - Dosen/Admin
+                    {{ Auth::user()->name }} - {{ strtoupper(Auth::user()->role )}}
                     <small>Member since Nov. 2023</small>
                   </p>
                 </li>
