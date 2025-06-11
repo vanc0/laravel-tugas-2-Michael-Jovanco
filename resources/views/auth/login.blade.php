@@ -116,21 +116,7 @@
     <div class="center-box">
         <div class="logo-jadwal">
             <!-- Simple "jadwal" calendar logo SVG -->
-            <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
-                <rect x="8" y="16" width="48" height="40" rx="8" fill="#f53003" opacity="0.1"/>
-                <rect x="8" y="16" width="48" height="40" rx="8" stroke="#f53003" stroke-width="2"/>
-                <rect x="8" y="24" width="48" height="8" fill="#f53003" opacity="0.2"/>
-                <rect x="8" y="24" width="48" height="8" stroke="#f53003" stroke-width="2"/>
-                <rect x="16" y="8" width="4" height="16" rx="2" fill="#f53003"/>
-                <rect x="44" y="8" width="4" height="16" rx="2" fill="#f53003"/>
-                <!-- Dots for days -->
-                <circle cx="20" cy="36" r="2" fill="#f53003"/>
-                <circle cx="32" cy="36" r="2" fill="#f53003"/>
-                <circle cx="44" cy="36" r="2" fill="#f53003"/>
-                <circle cx="20" cy="48" r="2" fill="#f53003"/>
-                <circle cx="32" cy="48" r="2" fill="#f53003"/>
-                <circle cx="44" cy="48" r="2" fill="#f53003"/>
-            </svg>
+            <img src="{{ asset('images/logo_orange.png') }}" alt="" style="width: 150px; height: 150px;">
         </div>
         <div class="form-title">Login</div>
         @if (session('status'))
